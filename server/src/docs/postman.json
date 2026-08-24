@@ -1,0 +1,1665 @@
+{
+  "info": {
+    "_postman_id": "c90504e6-6c5a-43ce-9830-78903329006a",
+    "name": "Artisan's Corner Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56571501",
+    "_collection_link": "https://go.postman.co/collection/56571501-c90504e6-6c5a-43ce-9830-78903329006a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register",
+          "item": [
+            {
+              "name": "api/auth/register",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Diya\",\r\n    \"email\": \"diya@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/auth/register",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "auth", "register"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "item": [
+            {
+              "name": "api/auth/login",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"diya@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/auth/login",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "auth", "login"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Logout",
+          "item": [
+            {
+              "name": "api/auth/logout",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer ",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/auth/logout?",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "auth", "logout"],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": null,
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get Profile",
+          "item": [
+            {
+              "name": "api/auth/profile",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/auth/profile",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "auth", "profile"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update Profile",
+          "item": [
+            {
+              "name": "api/auth/profile",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Ram Ram\",\r\n    \"phone\": \"9876543210\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/auth/profile",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "auth", "profile"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update Shipping Address",
+          "item": [
+            {
+              "name": "api/auth/address",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"fullName\": \"Diya\",\r\n    \"phone\": \"1234567890\",\r\n    \"address\": \"H. No. 2020\",\r\n    \"city\": \"Panipat\",\r\n    \"state\": \"Haryana\",\r\n    \"pincode\": \"130021\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/auth/address",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "auth", "address"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Reset Password",
+          "item": [
+            {
+              "name": "New Request",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"coked61068@archifun.com\",\r\n  \"otp\": \"910042\",\r\n  \"newPassword\": \"NewPassword123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/auth/reset-password",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "auth", "reset-password"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Forgot Password",
+          "item": [
+            {
+              "name": "forgot-password",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"coked61068@archifun.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/auth/forgot-password",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "auth", "forgot-password"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Seller",
+      "item": [
+        {
+          "name": "Become Seller",
+          "item": [
+            {
+              "name": "api/seller/become-seller",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"storeName\": \"Final Artisan Store\",\r\n    \"description\": \"Handmade artisan products for final backend testing\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/seller/become-seller",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "seller", "become-seller"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Close Store",
+          "item": [
+            {
+              "name": "api/seller/close-store",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/seller/close-store",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "seller", "close-store"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Reopen Store",
+          "item": [
+            {
+              "name": "api/seller/reopen-store",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/seller/reopen-store",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "seller", "reopen-store"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get Seller Orders",
+          "item": [
+            {
+              "name": "api/seller/orders",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/seller/orders",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "seller", "orders"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Seller Ships Order",
+          "item": [
+            {
+              "name": "api/seller/order/ORDER_ID/status",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"Shipped\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/seller/order/6a5fc646e52fc444583e0e22/status",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "seller",
+                    "order",
+                    "6a5fc646e52fc444583e0e22",
+                    "status"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Seller Delivers Order",
+          "item": [
+            {
+              "name": "api/seller/order/ORDER_ID/status",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"Delivered\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/seller/order/6a5fc646e52fc444583e0e22/status",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "seller",
+                    "order",
+                    "6a5fc646e52fc444583e0e22",
+                    "status"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get Seller Analytics",
+          "item": [
+            {
+              "name": "api/seller/analytics",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get My Store",
+          "item": [
+            {
+              "name": "api/seller/store",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update My Store",
+          "item": [
+            {
+              "name": "/api/seller/store",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "item": [
+        {
+          "name": "Create Category",
+          "item": [
+            {
+              "name": "api/category/create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"Home Decor\",\r\n    \"description\":\"Home Decoration from Handmads Products\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/category/create",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "category", "create"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get All Categories",
+          "item": [
+            {
+              "name": "/api/category/all",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"_id\": \"6a59fe10a0c04a683ae7d434\"\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/category/all",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "category", "all"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Create Product",
+          "item": [
+            {
+              "name": "api/product/create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Decorate basket",
+                      "type": "text",
+                      "uuid": "3d5119e1-48bb-4686-9ad6-dd6ac7532c11"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Beautiful Handmade basket",
+                      "type": "text",
+                      "uuid": "366f31bc-5fdb-454a-b8bd-1fc4efe1cf20"
+                    },
+                    {
+                      "key": "price",
+                      "value": "299",
+                      "type": "text",
+                      "uuid": "b4abc5be-c35f-40ee-948f-8df29718e7f6"
+                    },
+                    {
+                      "key": "stock",
+                      "value": "15",
+                      "type": "text",
+                      "uuid": "41fd6630-e251-4ca8-9785-9ec800c66373"
+                    },
+                    {
+                      "key": "category",
+                      "value": "6a5fbd4497e2e01c4b4e3ce0",
+                      "type": "text",
+                      "uuid": "c595760f-758e-4952-89a9-3eef1a50ba93"
+                    },
+                    {
+                      "key": "images",
+                      "type": "file",
+                      "uuid": "d4400880-58f3-45e9-815e-b043bcbae0d2",
+                      "value": null
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/product/create",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "product", "create"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get All Products",
+          "item": [
+            {
+              "name": "api/product/all",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "cc769eed-c22c-423d-b888-08eccc325f35"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10",
+                      "type": "text",
+                      "uuid": "682d9122-9840-4fb9-b9c9-2b478901aa0d"
+                    },
+                    {
+                      "key": "search",
+                      "value": "vase",
+                      "type": "text",
+                      "uuid": "b12809b4-f9af-40de-93c6-05501febe287"
+                    },
+                    {
+                      "key": "category",
+                      "value": "6a59fe10a0c04a683ae7d434",
+                      "type": "text",
+                      "uuid": "4cf4d4cb-6355-4e3f-86ea-5913641fff82"
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "100",
+                      "type": "text",
+                      "uuid": "b8a0876c-42ae-4634-9ad5-71a5f55938b2"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "2000",
+                      "type": "text",
+                      "uuid": "f4eb912b-8dcf-46e9-a362-fc3eda9b2245"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "newest",
+                      "type": "text",
+                      "uuid": "dfe493df-e773-43af-a3e0-56cf110a49a9"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "price_asc",
+                      "type": "text",
+                      "uuid": "fe1533bd-4004-434c-873c-d852592e8b3b"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "price_desc",
+                      "type": "text",
+                      "uuid": "15d28332-5737-4c2b-8497-16b2a728fcc2"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/product/all",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "product", "all"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "api/product/PRODUCT_ID",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/product/6a5fc0d8e52fc444583e0e13",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "product", "6a5fc0d8e52fc444583e0e13"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "api/product/my-products",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer ",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/product/my-products",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "product", "my-products"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update Product",
+          "item": [
+            {
+              "name": "api/product/update/PRODUCT_ID",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Handmade Wooden Vase",
+                      "type": "text",
+                      "uuid": "7744d445-a987-46bf-b157-e3a233284346"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Premium & Beautiful Handmade Vase",
+                      "type": "text",
+                      "uuid": "34745657-8f33-4887-9c70-e9d072813254"
+                    },
+                    {
+                      "key": "price",
+                      "value": "999",
+                      "type": "text",
+                      "uuid": "3824f003-b455-4e79-b372-65f4272dc460"
+                    },
+                    {
+                      "key": "stock",
+                      "value": "5",
+                      "type": "text",
+                      "uuid": "07db42e9-9385-4f45-acd8-71e1872022e4"
+                    },
+                    {
+                      "key": "category",
+                      "value": "6a59fe10a0c04a683ae7d434",
+                      "type": "text",
+                      "uuid": "f95094a5-46e3-4a78-b8d1-9ceaac6067c4"
+                    },
+                    {
+                      "key": "images",
+                      "type": "file",
+                      "uuid": "d858fbb2-f5ce-40ad-a4e1-6dc6fb83eb7f",
+                      "src": "/C:/Users/tusha/Desktop/wooden vase.jpg"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/product/update/6a5a0c5f196b81ac22dc5269",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "product",
+                    "update",
+                    "6a5a0c5f196b81ac22dc5269"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Delete Product",
+          "item": [
+            {
+              "name": "api/product/delete/PRODUCT_ID",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/product/delete/6a5a0c5f196b81ac22dc5269",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "product",
+                    "delete",
+                    "6a5a0c5f196b81ac22dc5269"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Place Order",
+          "item": [
+            {
+              "name": "api/order/place",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/order/place",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "order", "place"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "My Orders",
+          "item": [
+            {
+              "name": "api/order/my-orders",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/order/my-orders?=",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "order", "my-orders"],
+                  "query": [
+                    {
+                      "key": null,
+                      "value": "",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Order Details",
+          "item": [
+            {
+              "name": "api/order/ORDER_ID",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/order/6a5fc646e52fc444583e0e22",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "order", "6a5fc646e52fc444583e0e22"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "item": [
+        {
+          "name": "Pay Order - Dummy Payment",
+          "item": [
+            {
+              "name": "api/payment/pay",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"orderId\": \"6a5fc646e52fc444583e0e22\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/payment/pay",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "payment", "pay"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        {
+          "name": "Create Review",
+          "item": [
+            {
+              "name": "api/review/create",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"productId\": \"6a5fc0d8e52fc444583e0e13\",\r\n    \"rating\": 4.5,\r\n    \"comment\": \"Very Good\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/review/create",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "review", "create"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get Product Reviews",
+          "item": [
+            {
+              "name": "api/review/product/PRODUCT_ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/review/product/6a5fc0d8e52fc444583e0e13",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "review",
+                    "product",
+                    "6a5fc0d8e52fc444583e0e13"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update Review",
+          "item": [
+            {
+              "name": "api/review/REVIEW_ID",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"Excellent handmade product\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/review/6a5f4ffbe26b6a45b565b948",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "review", "6a5f4ffbe26b6a45b565b948"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Delete Review",
+          "item": [
+            {
+              "name": "api/delete-review/REVIEW_ID",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/review/6a5fc883e52fc444583e0e29",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "review", "6a5fc883e52fc444583e0e29"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Dashboard",
+          "item": [
+            {
+              "name": "api/admin/dashboard",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/dashboard",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "admin", "dashboard"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "All Users",
+          "item": [
+            {
+              "name": "api/admin/users",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/users",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "admin", "users"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "All Sellers",
+          "item": [
+            {
+              "name": "api/admin/sellers",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/sellers",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "admin", "sellers"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Block User",
+          "item": [
+            {
+              "name": "api/admin/user/USER_ID/block",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/user/6a59fbeda0c04a683ae7d431/block",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "admin",
+                    "user",
+                    "6a59fbeda0c04a683ae7d431",
+                    "block"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "All Orders",
+          "item": [
+            {
+              "name": "api/admin/orders",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/orders",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "admin", "orders"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update Order Status (Admin Override)",
+          "item": [
+            {
+              "name": "api/admin/order/ORDER_ID/status/Shipped",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"Shipped\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/order/6a5f426e2357b84d42b09af3/status",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "admin",
+                    "order",
+                    "6a5f426e2357b84d42b09af3",
+                    "status"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "api/admin/order/ORDER_ID/status/Processing",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"Processing\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/order/6a5f426e2357b84d42b09af3/status",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "admin",
+                    "order",
+                    "6a5f426e2357b84d42b09af3",
+                    "status"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "api/admin/order/ORDER_ID/status/Delivered",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"Delivered\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/order/6a5f3fd7bb243c5e0f0639e1/status",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "admin",
+                    "order",
+                    "6a5f3fd7bb243c5e0f0639e1",
+                    "status"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "api/admin/order/ORDER_ID/status/Cancelled",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"Cancelled\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/order/6a5f426e2357b84d42b09af3/status",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "admin",
+                    "order",
+                    "6a5f426e2357b84d42b09af3",
+                    "status"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Deactivate Product",
+          "item": [
+            {
+              "name": "api/admin/product/PRODUCT_ID/status",
+              "request": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/admin/product/6a5f3d0abb243c5e0f0639d9/status",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "admin",
+                    "product",
+                    "6a5f3d0abb243c5e0f0639d9",
+                    "status"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "item": [
+        {
+          "name": "Add To Cart",
+          "item": [
+            {
+              "name": "api/cart/add",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"productId\":\"6a5fc0d8e52fc444583e0e13\",\r\n    \"quantity\":2\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/cart/add",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "cart", "add"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get Cart",
+          "item": [
+            {
+              "name": "api/cart",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/cart",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "cart"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update Quantity",
+          "item": [
+            {
+              "name": "api/cart/update/PRODUCT_ID",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"productId\":\"6a5a0c5f196b81ac22dc5269\",\r\n    \"quantity\":1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/cart/update/6a5a0c5f196b81ac22dc5269",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "cart", "update", "6a5a0c5f196b81ac22dc5269"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Clear Cart",
+          "item": [
+            {
+              "name": "api/cart/clear",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:5000/api/cart/clear",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "cart", "clear"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Remove Item in Cart",
+          "item": [
+            {
+              "name": "api/cart/remove/PRODUCT_ID",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "",
+                    "type": "text"
+                  }
+                ]
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_1ab9",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_0zg3",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0ldd",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_03sc",
+      "secret": true
+    }
+  ]
+}
